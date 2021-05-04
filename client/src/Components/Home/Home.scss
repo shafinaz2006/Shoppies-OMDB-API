@@ -1,0 +1,69 @@
+@import '../../Styles/abstracts/variables.scss';
+@import '../../Styles/abstracts/mixins.scss';
+.home {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include tablet {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    @include desktop {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    &__heading {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        @include tablet {
+            margin-top: 4rem;
+        }
+    }
+    &__subHeading {
+        padding-bottom: 1.5rem;
+        &--movieResult {
+            padding-left: 1rem;
+            @include tablet {
+                padding-top: 1rem;
+                padding-left: 2rem;
+            }
+        }
+    }
+    &__movieSearch {
+        @include box-style;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        @include tablet {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+    &__movieInfo {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__movieResult {
+        width: 100%;
+        @include box-style;
+        // margin-left: 1rem;
+        // margin-right: 1rem;
+        padding-bottom: 2rem;
+        @include tablet {
+            width: 45%;
+        }
+    }
+    &__list {
+        padding-left: 2rem;
+        padding-right: 1rem;
+        @include tablet {
+            padding-left: 5rem;
+        }
+    }
+    &__item {
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,32 @@
+@import '../../Styles/abstracts/variables.scss';
+@import '../../Styles/abstracts/mixins.scss';
+.button {
+    background-color: white;
+    color: black;
+    height: 2rem;
+    display: block;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: fit-content;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    &:hover {
+        cursor: pointer;
+        background-color: #D3D3D3;
+    }
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        color: white;
+    }
+    @include tablet {
+        display: inline;
+    }
+    &--nominate {
+        margin-top: 0.5rem;
+    }
+}

@@ -1,0 +1,47 @@
+@import '../../Styles/abstracts/variables.scss';
+.input {
+    border-radius: 3px;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    margin-top: 0.5rem;
+    &::placeholder {
+        color: black;
+    }
+    &:active,
+    &:focus,
+    &:focus:active {
+        &::placeholder {
+            opacity: 0;
+        }
+    }
+    &-label {
+        color: black;
+    }
+    &--search {
+        background-image: url('../../Assets/icons/search.svg');
+        background-repeat: no-repeat;
+        background-position: 1rem, 1rem;
+        padding-left: 3rem;
+        opacity: 0.5;
+        &::placeholder {
+            color: black
+        }
+        &:active,
+        &:focus,
+        &:focus:active {
+            opacity: 1
+        }
+    }
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+    box-shadow: 0 0 30px white inset !important;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

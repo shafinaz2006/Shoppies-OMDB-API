@@ -1,0 +1,49 @@
+@import '../../Styles/abstracts/variables.scss';
+@import '../../Styles/abstracts/mixins.scss';
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: $color-primary-bg;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    @include tablet {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 1.15rem;
+    line-height: 1.15rem;
+    font-weight: bold;
+    @include tablet {
+        font-size: 1.15rem;
+        line-height: 1.15rem;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+textarea {
+    outline: none;
+}
