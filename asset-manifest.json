@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Shoppies-OMDB-API/static/css/main.1754df80.chunk.css",
+    "main.js": "/Shoppies-OMDB-API/static/js/main.d35e4826.chunk.js",
+    "main.js.map": "/Shoppies-OMDB-API/static/js/main.d35e4826.chunk.js.map",
+    "runtime-main.js": "/Shoppies-OMDB-API/static/js/runtime-main.805a6552.js",
+    "runtime-main.js.map": "/Shoppies-OMDB-API/static/js/runtime-main.805a6552.js.map",
+    "static/js/2.2a4ead08.chunk.js": "/Shoppies-OMDB-API/static/js/2.2a4ead08.chunk.js",
+    "static/js/2.2a4ead08.chunk.js.map": "/Shoppies-OMDB-API/static/js/2.2a4ead08.chunk.js.map",
+    "static/js/3.00dcbcbc.chunk.js": "/Shoppies-OMDB-API/static/js/3.00dcbcbc.chunk.js",
+    "static/js/3.00dcbcbc.chunk.js.map": "/Shoppies-OMDB-API/static/js/3.00dcbcbc.chunk.js.map",
+    "index.html": "/Shoppies-OMDB-API/index.html",
+    "static/css/main.1754df80.chunk.css.map": "/Shoppies-OMDB-API/static/css/main.1754df80.chunk.css.map",
+    "static/js/2.2a4ead08.chunk.js.LICENSE.txt": "/Shoppies-OMDB-API/static/js/2.2a4ead08.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/Shoppies-OMDB-API/static/media/search.6c95e853.svg",
+    "static/media/star.ecf2636e.svg": "/Shoppies-OMDB-API/static/media/star.ecf2636e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.805a6552.js",
+    "static/js/2.2a4ead08.chunk.js",
+    "static/css/main.1754df80.chunk.css",
+    "static/js/main.d35e4826.chunk.js"
+  ]
+}
