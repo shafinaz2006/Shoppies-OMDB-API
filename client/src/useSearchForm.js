@@ -1,9 +1,11 @@
 
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import {baseURL} from './Utils/API_data'; 
 const OMDB_API = process.env.REACT_APP_OMDB_API;
 
 const useSearchForm = () =>{
+    const [searchTitleTemp, setSearchTitleTemp] = useState('');
     const [searchTitle, setSearchTitle] = useState('');
     const [movieList, setMovieList] = useState([]);
     const [movieNotFound, setMovieNotFound] = useState(false)
@@ -25,7 +27,7 @@ const useSearchForm = () =>{
 // search input onChange event handler:
 
     const handleSearch = (event) => {
-        setSearchTitle(event.target.value);
+        setSearchTitleTemp(event.target.value);
     }
 
 // get movie list when enter is pressed:
@@ -33,7 +35,8 @@ const useSearchForm = () =>{
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault();
-            getMovieList(searchTitle);
+            setSearchTitle(searchTitleTemp);
+            getMovieList(searchTitleTemp);
         }
     }
 
@@ -41,14 +44,13 @@ const useSearchForm = () =>{
 
     const handleSubmit = (event) =>{
         event.preventDefault();
-        getMovieList(searchTitle);
+        setSearchTitle(searchTitleTemp);
+        getMovieList(searchTitleTemp);
     }
 // add nominate handler:
 
     const handleAddNominate = (event, nominatedMovie) =>{
-        // console.log(movie);
         setNominations(prevArray => [...prevArray, nominatedMovie])
-        
         let movieListUpdated = movieList.map(movie => 
             movie.imdbID === nominatedMovie.imdbID?{...movie, nominated: true}: {...movie} 
         );
@@ -60,7 +62,6 @@ const useSearchForm = () =>{
     const handleRemoveNominate = (event, nominatedMovie) =>{
         let newNominateList = nominations.filter(nomination => nomination.imdbID !== nominatedMovie.imdbID );
         setNominations([...newNominateList]);
-        // window.localStorage.setItem('nominations', JSON.stringify(nominations));
         let movieListUpdated = movieList.map(movie => 
             movie.imdbID === nominatedMovie.imdbID?{...movie, nominated: false}: {...movie} 
         );
@@ -70,9 +71,8 @@ const useSearchForm = () =>{
 // axios request to get movieList:
 
     const getMovieList = (search) => {
-        // console.log(search)
         axios
-            .get(`http://www.omdbapi.com/?apikey=${OMDB_API}&s=${search}`)
+            .get(`${baseURL}${OMDB_API}&s=${search}`)
             .then(response => {
                 if(response.data.Search){
                     let ids = response.data.Search.map(movie => movie.imdbID);
@@ -91,7 +91,8 @@ const useSearchForm = () =>{
             })
             .catch(error => console.log('error in movie data', error));
     }
-    return {searchTitle, movieList, movieNotFound, nominations, handleSearch, handleKeyPress,
-            handleSubmit, handleAddNominate, handleRemoveNominate}
+    return {searchTitleTemp, searchTitle, movieList, movieNotFound, nominations, 
+            handleSearch, handleKeyPress, handleSubmit, 
+            handleAddNominate, handleRemoveNominate}
 }
 export default useSearchForm;

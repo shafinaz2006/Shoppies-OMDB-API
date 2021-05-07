@@ -4,7 +4,7 @@ import star from '../../Assets/icons/star.svg';
 import useSearchForm from '../../useSearchForm';
 
 const Home = () => {
-    const {searchTitle, movieList, movieNotFound, nominations, 
+    const {searchTitleTemp, searchTitle, movieList, movieNotFound, nominations, 
            handleSearch, handleKeyPress, handleSubmit,
            handleAddNominate, handleRemoveNominate} = useSearchForm();
     
@@ -14,7 +14,7 @@ const Home = () => {
             <form className='home__movieSearch' onSubmit={handleSubmit}>
                 <label className='input-label' htmlFor='movieTitle'>Movie title </label>
                 <input className='input input--search' name='movieTitle' placeholder='movie title'
-                    value={searchTitle} onKeyPress={handleKeyPress}
+                    value={searchTitleTemp} onKeyPress={handleKeyPress}
                     onChange={handleSearch}
                 />
                 <input className='button button--search' type='submit' value='Search'/>
@@ -34,23 +34,22 @@ const Home = () => {
                         <h2 className='home__subHeading home__subHeading--movieResult'>Results for "{searchTitle}"</h2>
                         <ul className='home__list'>
                             {movieList.map(movie =>
-                                <li className='home__item' key={movie.imdbID}>
-                                    <span className='home__movieName'>
-                                        <img className='home__starIcon' src={star} alt='star icon'/>
-                                        {movie.Title} ({movie.Year})
-                                    </span>
-                                    <button className='button button--nominate' 
-                                            disabled={movie.nominated}
-                                            onClick={(event) => handleAddNominate(event, movie)}>
-                                            Nominate
-                                    </button>
-                                </li>
+                            <li className='home__item' key={movie.imdbID}>
+                                <span className='home__movieName'>
+                                    <img className='home__starIcon' src={star} alt='star icon'/>
+                                    {movie.Title} ({movie.Year})
+                                </span>
+                                <button className='button button--nominate' 
+                                        disabled={movie.nominated}
+                                        onClick={(event) => handleAddNominate(event, movie)}>
+                                        Nominate
+                                </button>
+                            </li>
                             )}
                         </ul>
                     </div>: ''
                     }
                 </div>
-                
                 <div className='home__movieResult'>
                     {nominations.length > 0?
                     <div>
@@ -65,16 +64,16 @@ const Home = () => {
                         }
                         <ul className='home__list'>
                             {nominations.map(nomination =>
-                                <li className='home__item' key={nomination.imdbID}>
-                                    <span className='home__movieName'>
-                                        <img className='home__starIcon' src={star} alt='star icon'/>
-                                        {nomination.Title} ({nomination.Year})
-                                    </span>
-                                    <button className='button button--nominate'
-                                            onClick={(event) => handleRemoveNominate(event, nomination)}>
-                                        Remove
-                                    </button>
-                                </li>
+                            <li className='home__item' key={nomination.imdbID}>
+                                <span className='home__movieName'>
+                                    <img className='home__starIcon' src={star} alt='star icon'/>
+                                    {nomination.Title} ({nomination.Year})
+                                </span>
+                                <button className='button button--nominate'
+                                        onClick={(event) => handleRemoveNominate(event, nomination)}>
+                                    Remove
+                                </button>
+                            </li>
                             )}
                         </ul>
                     </div>
