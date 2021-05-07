@@ -11,6 +11,10 @@
         padding-left: 10rem;
         padding-right: 10rem;
     }
+    @include bigScreen {
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
     &__heading {
         margin-top: 3rem;
         margin-bottom: 1rem;
@@ -40,7 +44,8 @@
     &__movieInfo {
         display: flex;
         flex-direction: column;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
         @include tablet {
             flex-direction: row;
             justify-content: space-between;
@@ -49,21 +54,90 @@
     &__movieResult {
         width: 100%;
         @include box-style;
-        // margin-left: 1rem;
-        // margin-right: 1rem;
+        margin-bottom: 1rem;
         padding-bottom: 2rem;
         @include tablet {
-            width: 45%;
+            width: 49%;
         }
     }
     &__list {
-        padding-left: 2rem;
         padding-right: 1rem;
         @include tablet {
-            padding-left: 5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
     }
     &__item {
         margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+        @include tablet {
+            padding-left: 0rem;
+            flex-direction: row;
+        }
+    }
+    &__movieName {
+        width: 90%;
+        padding-bottom: 0.75rem;
+        @include tablet {
+            width: 70%;
+            padding-bottom: 0rem;
+        }
+    }
+    &__starIcon {
+        opacity: 0.75;
+        height: 0.75rem;
+        width: 0.75rem;
+        margin-right: 0.5rem;
+        margin-top: 0rem;
+    }
+    &__noMovie {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    &__messageHeading {
+        width: 85%;
+        font-size: 1rem;
+        font-weight: normal;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        animation-name: animation__nomination__banner;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        @include tablet {
+            margin-top: 2rem;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+            // padding-left: 5rem;
+        }
+    }
+}
+
+@keyframes animation__nomination__banner {
+    0% {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
     }
 }
