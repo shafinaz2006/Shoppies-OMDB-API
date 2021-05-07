@@ -37,6 +37,12 @@ const useSearchForm = () =>{
         }
     }
 
+// handle search submit:
+
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+        getMovieList(searchTitle);
+    }
 // add nominate handler:
 
     const handleAddNominate = (event, nominatedMovie) =>{
@@ -86,6 +92,6 @@ const useSearchForm = () =>{
             .catch(error => console.log('error in movie data', error));
     }
     return {searchTitle, movieList, movieNotFound, nominations, handleSearch, handleKeyPress,
-             handleAddNominate, handleRemoveNominate}
+            handleSubmit, handleAddNominate, handleRemoveNominate}
 }
 export default useSearchForm;

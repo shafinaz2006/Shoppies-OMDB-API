@@ -5,18 +5,19 @@ import useSearchForm from '../../useSearchForm';
 
 const Home = () => {
     const {searchTitle, movieList, movieNotFound, nominations, 
-           handleSearch, handleKeyPress,
+           handleSearch, handleKeyPress, handleSubmit,
            handleAddNominate, handleRemoveNominate} = useSearchForm();
     
     return (
         <section className='home'>
             <h1 className='home__heading'>The Shoppies</h1>
-            <form className='home__movieSearch'>
+            <form className='home__movieSearch' onSubmit={handleSubmit}>
                 <label className='input-label' htmlFor='movieTitle'>Movie title </label>
                 <input className='input input--search' name='movieTitle' placeholder='movie title'
                     value={searchTitle} onKeyPress={handleKeyPress}
                     onChange={handleSearch}
                 />
+                <input className='button button--search' type='submit' value='Search'/>
             </form>
             <div className='home__movieInfo'>
                 <div className= 'home__movieResult'>
@@ -57,8 +58,8 @@ const Home = () => {
                             Nominations
                         </h2>
                         {nominations.length >= 5? 
-                        <div className='home__messageHeading'>
-                            <p>You have nominated five movies!!!</p>
+                        <div className='home__messageHeading home__messageHeading--nominationsMore'>
+                            <p>You have nominated {nominations.length} movies!!!</p>
                         </div>
                         : ''
                         }

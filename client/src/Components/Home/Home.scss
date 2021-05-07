@@ -36,7 +36,11 @@
         @include box-style;
         padding-left: 1rem;
         padding-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         @include tablet {
+            flex-direction: column;
             padding-left: 2rem;
             padding-right: 2rem;
         }
@@ -126,6 +130,9 @@
             margin-right: 2rem;
             margin-bottom: 2rem;
             // padding-left: 5rem;
+        }
+        &--nominationsMore {
+            margin-top: 0rem;
         }
     }
 }

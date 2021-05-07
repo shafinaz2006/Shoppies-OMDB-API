@@ -23,11 +23,8 @@
     &:active {
         color: white;
     }
-    @include tablet {
-        // display: inline;
-    }
-    &--nominate {
-        // margin-top: 0.5rem;
+    &--search {
+        align-self: flex-end;
     }
     &:disabled {
         cursor: not-allowed;
