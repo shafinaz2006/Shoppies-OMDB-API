@@ -1,5 +1,5 @@
 
 
-const baseURL = 'http://www.omdbapi.com/?apikey='
+const baseURL = 'https://www.omdbapi.com/?apikey='
 
 export { baseURL };

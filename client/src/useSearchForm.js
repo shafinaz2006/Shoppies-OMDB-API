@@ -71,6 +71,7 @@ const useSearchForm = () =>{
 // axios request to get movieList:
 
     const getMovieList = (search) => {
+        // console.log(`${baseURL}${OMDB_API}&s=${search}`)
         axios
             .get(`${baseURL}${OMDB_API}&s=${search}`)
             .then(response => {
