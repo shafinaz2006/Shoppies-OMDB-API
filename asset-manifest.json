@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Shoppies-OMDB-API/static/css/main.a0e778d6.chunk.css",
-    "main.js": "/Shoppies-OMDB-API/static/js/main.d35e4826.chunk.js",
-    "main.js.map": "/Shoppies-OMDB-API/static/js/main.d35e4826.chunk.js.map",
+    "main.js": "/Shoppies-OMDB-API/static/js/main.7a756730.chunk.js",
+    "main.js.map": "/Shoppies-OMDB-API/static/js/main.7a756730.chunk.js.map",
     "runtime-main.js": "/Shoppies-OMDB-API/static/js/runtime-main.805a6552.js",
     "runtime-main.js.map": "/Shoppies-OMDB-API/static/js/runtime-main.805a6552.js.map",
     "static/js/2.2a4ead08.chunk.js": "/Shoppies-OMDB-API/static/js/2.2a4ead08.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.805a6552.js",
     "static/js/2.2a4ead08.chunk.js",
     "static/css/main.a0e778d6.chunk.css",
-    "static/js/main.d35e4826.chunk.js"
+    "static/js/main.7a756730.chunk.js"
   ]
 }
