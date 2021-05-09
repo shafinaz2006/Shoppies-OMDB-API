@@ -60,6 +60,10 @@
         @include box-style;
         margin-bottom: 1rem;
         padding-bottom: 2rem;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
         @include tablet {
             width: 49%;
         }
@@ -80,6 +84,7 @@
         @include tablet {
             padding-left: 0rem;
             flex-direction: row;
+            justify-content: space-between;
         }
     }
     &__movieName {
@@ -104,15 +109,14 @@
         align-items: center;
     }
     &__messageHeading {
-        width: 85%;
+        width: calc(100% - 2.25rem);
         font-size: 1rem;
         font-weight: normal;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        margin-left: 1rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -125,11 +129,11 @@
         animation-direction: alternate;
         animation-timing-function: ease-in-out;
         @include tablet {
+            width: calc(100% - 4.25rem);
             margin-top: 2rem;
             margin-left: 2rem;
             margin-right: 2rem;
             margin-bottom: 2rem;
-            // padding-left: 5rem;
         }
         &--nominationsMore {
             margin-top: 0rem;
