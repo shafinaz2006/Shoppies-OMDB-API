@@ -1,154 +1,146 @@
-@import '../../Styles/abstracts/variables.scss';
-@import '../../Styles/abstracts/mixins.scss';
+@import "../../Styles/abstracts/variables.scss";
+@import "../../Styles/abstracts/mixins.scss";
+
 .home {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @include tablet {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  @include desktop {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  @include bigScreen {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+  &__heading {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    @include tablet {
+      margin-top: 4rem;
+    }
+  }
+  &__subHeading {
+    padding-bottom: 1.5rem;
+    &--movieResult {
+      padding-left: 1rem;
+      @include tablet {
+        padding-top: 1rem;
+        padding-left: 2rem;
+      }
+    }
+  }
+  &__movieSearch {
+    @include box-style;
     padding-left: 1rem;
     padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
     @include tablet {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+      flex-direction: column;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
-    @include desktop {
-        padding-left: 10rem;
-        padding-right: 10rem;
+  }
+  &__movieInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
     }
-    @include bigScreen {
-        padding-left: 15rem;
-        padding-right: 15rem;
+  }
+  &__movieResult {
+    width: 100%;
+    @include box-style;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    @include tablet {
+      width: 49%;
     }
-    &__heading {
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        @include tablet {
-            margin-top: 4rem;
-        }
+  }
+  &__list {
+    padding-right: 1rem;
+    @include tablet {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
-    &__subHeading {
-        padding-bottom: 1.5rem;
-        &--movieResult {
-            padding-left: 1rem;
-            @include tablet {
-                padding-top: 1rem;
-                padding-left: 2rem;
-            }
-        }
+  }
+  &__item {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+    @include tablet {
+      padding-left: 0rem;
+      flex-direction: row;
+      justify-content: space-between;
     }
-    &__movieSearch {
-        @include box-style;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        @include tablet {
-            flex-direction: column;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
+  }
+  &__movieName {
+    width: 90%;
+    padding-bottom: 0.75rem;
+    @include tablet {
+      width: 70%;
+      padding-bottom: 0rem;
     }
-    &__movieInfo {
-        display: flex;
-        flex-direction: column;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-        @include tablet {
-            flex-direction: row;
-            justify-content: space-between;
-        }
+  }
+  &__starIcon {
+    opacity: 0.75;
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+  }
+  &__noMovie {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__messageHeading {
+    width: calc(100% - 2.25rem);
+    font-size: 1rem;
+    font-weight: normal;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 1rem 0 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    animation: animation__nomination__banner 4s infinite alternate ease-in-out;
+
+    @include tablet {
+      width: calc(100% - 4.25rem);
+      margin-top: 2rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
     }
-    &__movieResult {
-        width: 100%;
-        @include box-style;
-        margin-bottom: 1rem;
-        padding-bottom: 2rem;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-        @include tablet {
-            width: 49%;
-        }
+    &--nominationsMore {
+      margin-top: 0rem;
     }
-    &__list {
-        padding-right: 1rem;
-        @include tablet {
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-    }
-    &__item {
-        margin-bottom: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 1rem;
-        @include tablet {
-            padding-left: 0rem;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    }
-    &__movieName {
-        width: 90%;
-        padding-bottom: 0.75rem;
-        @include tablet {
-            width: 70%;
-            padding-bottom: 0rem;
-        }
-    }
-    &__starIcon {
-        opacity: 0.75;
-        height: 0.75rem;
-        width: 0.75rem;
-        margin-right: 0.5rem;
-        margin-top: 0rem;
-    }
-    &__noMovie {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    &__messageHeading {
-        width: calc(100% - 2.25rem);
-        font-size: 1rem;
-        font-weight: normal;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        margin-left: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid rgba(0, 0, 0, 0.2);
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-        animation-name: animation__nomination__banner;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-        @include tablet {
-            width: calc(100% - 4.25rem);
-            margin-top: 2rem;
-            margin-left: 2rem;
-            margin-right: 2rem;
-            margin-bottom: 2rem;
-        }
-        &--nominationsMore {
-            margin-top: 0rem;
-        }
-    }
+  }
 }
 
 @keyframes animation__nomination__banner {
-    0% {
-        background-color: rgba(0, 0, 0, 0.0);
-    }
-    50% {
-        background-color: rgba(0, 0, 0, 0.2);
-    }
-    100% {
-        background-color: rgba(0, 0, 0, 0);
-    }
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  50% {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }

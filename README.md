@@ -1,6 +1,5 @@
-# Shopify-OMDB-API
-
-This is the challenge provided by Shopify. 
+# Shoppies-OMDB-API
+ 
 This application searchs OMDB for movies, and allowes the user to save their
 favourite films they feel should be up for nomination.
 
