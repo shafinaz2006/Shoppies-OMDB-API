@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Shoppies-OMDB-API/static/css/main.a0e778d6.chunk.css",
-    "main.js": "/Shoppies-OMDB-API/static/js/main.7a756730.chunk.js",
-    "main.js.map": "/Shoppies-OMDB-API/static/js/main.7a756730.chunk.js.map",
-    "runtime-main.js": "/Shoppies-OMDB-API/static/js/runtime-main.805a6552.js",
-    "runtime-main.js.map": "/Shoppies-OMDB-API/static/js/runtime-main.805a6552.js.map",
-    "static/js/2.2a4ead08.chunk.js": "/Shoppies-OMDB-API/static/js/2.2a4ead08.chunk.js",
-    "static/js/2.2a4ead08.chunk.js.map": "/Shoppies-OMDB-API/static/js/2.2a4ead08.chunk.js.map",
-    "static/js/3.00dcbcbc.chunk.js": "/Shoppies-OMDB-API/static/js/3.00dcbcbc.chunk.js",
-    "static/js/3.00dcbcbc.chunk.js.map": "/Shoppies-OMDB-API/static/js/3.00dcbcbc.chunk.js.map",
+    "main.css": "/Shoppies-OMDB-API/static/css/main.5fec0b70.chunk.css",
+    "main.js": "/Shoppies-OMDB-API/static/js/main.0b17066b.chunk.js",
+    "main.js.map": "/Shoppies-OMDB-API/static/js/main.0b17066b.chunk.js.map",
+    "runtime-main.js": "/Shoppies-OMDB-API/static/js/runtime-main.30c9204a.js",
+    "runtime-main.js.map": "/Shoppies-OMDB-API/static/js/runtime-main.30c9204a.js.map",
+    "static/js/2.66849fb6.chunk.js": "/Shoppies-OMDB-API/static/js/2.66849fb6.chunk.js",
+    "static/js/2.66849fb6.chunk.js.map": "/Shoppies-OMDB-API/static/js/2.66849fb6.chunk.js.map",
+    "static/js/3.ca9ce884.chunk.js": "/Shoppies-OMDB-API/static/js/3.ca9ce884.chunk.js",
+    "static/js/3.ca9ce884.chunk.js.map": "/Shoppies-OMDB-API/static/js/3.ca9ce884.chunk.js.map",
     "index.html": "/Shoppies-OMDB-API/index.html",
-    "static/css/main.a0e778d6.chunk.css.map": "/Shoppies-OMDB-API/static/css/main.a0e778d6.chunk.css.map",
-    "static/js/2.2a4ead08.chunk.js.LICENSE.txt": "/Shoppies-OMDB-API/static/js/2.2a4ead08.chunk.js.LICENSE.txt",
+    "static/css/main.5fec0b70.chunk.css.map": "/Shoppies-OMDB-API/static/css/main.5fec0b70.chunk.css.map",
+    "static/js/2.66849fb6.chunk.js.LICENSE.txt": "/Shoppies-OMDB-API/static/js/2.66849fb6.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/Shoppies-OMDB-API/static/media/search.6c95e853.svg",
     "static/media/star.ecf2636e.svg": "/Shoppies-OMDB-API/static/media/star.ecf2636e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.805a6552.js",
-    "static/js/2.2a4ead08.chunk.js",
-    "static/css/main.a0e778d6.chunk.css",
-    "static/js/main.7a756730.chunk.js"
+    "static/js/runtime-main.30c9204a.js",
+    "static/js/2.66849fb6.chunk.js",
+    "static/css/main.5fec0b70.chunk.css",
+    "static/js/main.0b17066b.chunk.js"
   ]
 }
