@@ -7,7 +7,9 @@ const NominationsHeading = ({nominations}) => {
         Nominations
       </h2>
       {nominations.length >= 5 ?
-          <p className="home__messageHeading home__messageHeading--nominationsMore">You have nominated {nominations.length} movies!!!</p>
+          <p className="home__messageHeading home__messageHeading--nominationsMore">
+            You have nominated {nominations.length} movies!!!
+          </p>
        : ''}
     </>
   );
